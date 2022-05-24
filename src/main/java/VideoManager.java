@@ -54,7 +54,7 @@ public class VideoManager {
 
                     frameGrabber.setFrameNumber(index);
                     f = frameGrabber.grabKeyFrame() ;
-                    index --;
+                    index -=5;
 
                 }while (f == null && index >= 0);
 

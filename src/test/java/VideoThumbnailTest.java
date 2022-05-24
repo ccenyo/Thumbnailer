@@ -34,4 +34,29 @@ public class VideoThumbnailTest {
                 .generate();
         Assertions.assertNotNull(file);
     }
+
+    @Test
+    public void testVideoCustomThumbnailPortrait () throws VideoThumbnailException {
+        var file = new VideoThumbnail(new File("src/test/resources/portrait.mp4"), destinationPath)
+                .setNumberOfFrame(4)
+                .setImageDivisor(new ImageDivisor(1,4))
+                .generate();
+        Assertions.assertNotNull(file);
+    }
+
+    @Test
+    public void testVideoErrorDestinationPathNotExists () {
+        Assertions.assertThrows(VideoThumbnailException.class, () -> {
+            new VideoThumbnail(new File("src/test/resources/portrait.mp4"), "destinationPath")
+                    .generate();
+        });
+    }
+
+    @Test
+    public void testVideoErrorDestinationPathNull () {
+        Assertions.assertThrows(VideoThumbnailException.class, () -> {
+            new VideoThumbnail(new File("src/test/resources/portrait.mp4"), null)
+                    .generate();
+        });
+    }
 }
