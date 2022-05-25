@@ -6,15 +6,14 @@ import java.util.Optional;
 public class VideoThumbnail {
     private final PictureManager pictureManager;
     private final VideoManager videoManager;
-    private final String destinationFolderPath;
+    private String destinationFolderPath = "./";
     private final File file;
 
     private Integer numberOfFrame = 4;
     private ImageDivisor imageDivisor;
     private boolean useAutomaticDimensions = false;
 
-    public VideoThumbnail(File file, String destinationFolderPath) {
-        this.destinationFolderPath = destinationFolderPath;
+    public VideoThumbnail(File file) {
         this.file = file;
         pictureManager = new PictureManager();
         videoManager = new VideoManager();
@@ -33,6 +32,11 @@ public class VideoThumbnail {
 
     public VideoThumbnail automaticDimensions() {
         this.useAutomaticDimensions = true;
+        return this;
+    }
+
+    public VideoThumbnail setDestinationFolderPath(String destinationFolderPath) {
+        this.destinationFolderPath = destinationFolderPath;
         return this;
     }
 

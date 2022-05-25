@@ -22,7 +22,7 @@ add the maven repository to your pom.xml
 
 
 ```java
-       var file = new VideoThumbnail(new File("path/to/file.mp4"), "/destination/path")
+       var file = new VideoThumbnail(new File("path/to/file.mp4"))
         .automaticDimensions()
         .generate();
 ```
@@ -30,7 +30,7 @@ add the maven repository to your pom.xml
 ![portrait image](https://user-images.githubusercontent.com/7427658/170223265-11c9eb0b-cb7c-4d83-88e3-8e1562596116.jpeg)
 
 ```java
-        var file = new VideoThumbnail(new File("path/to/file.mp4"), "/destination/path")
+        var file = new VideoThumbnail(new File("path/to/file.mp4"))
         .setNumberOfFrame(6)
         .setImageDivisor(new ImageDivisor(2,3))
         .generate();
