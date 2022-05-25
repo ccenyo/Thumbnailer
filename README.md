@@ -27,7 +27,7 @@ add the maven repository to your pom.xml
         .generate();
 ```
 
-![portrait image](images/1653463354709.jpeg?raw=true "Title")
+![portrait image](./images/1653463354709.jpeg?raw=true "Title")
 
 ```java
         var file = new VideoThumbnail(new File("path/to/file.mp4"), "/destination/path")
@@ -36,7 +36,7 @@ add the maven repository to your pom.xml
         .generate();
 ```
 
-![portrait image](images/1653463529590.jpeg?raw=true "Title")
+![portrait image](./images/1653463529590.jpeg?raw=true "Title")
 
 ## Built With
 * [Java SDK 17](https://www.oracle.com/technetwork/java/javase/downloads/jdk17-downloads-2133151.html) -  Java™ Platform
