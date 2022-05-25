@@ -8,13 +8,13 @@ public class VideoThumbnailTest {
 
     public String destinationPath;
 
-    @BeforeAll
+    @BeforeEach
     public void init() {
         destinationPath = System.getProperty("java.io.tmpdir") + "VideoThumbnailTest/";
         new File(destinationPath).mkdirs();
     }
 
-    @AfterAll
+    @AfterEach
     public void after() {
         new File(destinationPath).delete();
     }
