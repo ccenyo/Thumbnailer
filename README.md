@@ -15,7 +15,11 @@ if you want to use it in any environment, make sure you have the right JVM insta
 add the maven repository to your pom.xml
 
 ```java
-
+<dependency>
+    <groupId>com.github</groupId>
+    <artifactId>thumbnailer</artifactId>
+    <version>1.0.3</version>
+</dependency>
 ```
 
 ##Basic usage
