@@ -13,6 +13,14 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub ccenyo Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ccenyo/Thumbnailer</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.bytedeco</groupId>

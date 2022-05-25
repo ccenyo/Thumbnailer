@@ -31,8 +31,8 @@ add the maven repository to your pom.xml
 
 ```java
         var file = new VideoThumbnail(new File("path/to/file.mp4"), "/destination/path")
-        .setNumberOfFrame(4)
-        .setImageDivisor(new ImageDivisor(1,4))
+        .setNumberOfFrame(6)
+        .setImageDivisor(new ImageDivisor(2,3))
         .generate();
 ```
 
