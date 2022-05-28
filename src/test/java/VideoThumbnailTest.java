@@ -1,5 +1,10 @@
 import exceptions.VideoThumbnailException;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import thumbnailer.ImageDivisor;
+import thumbnailer.VideoThumbnail;
 
 import java.io.File;
 

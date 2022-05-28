@@ -1,3 +1,4 @@
+package thumbnailer;
 import exceptions.VideoThumbnailException;
 
 import java.io.File;

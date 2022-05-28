@@ -1,3 +1,5 @@
+package thumbnailer;
+
 import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
@@ -11,6 +13,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.List;
+
 import java.util.stream.Collectors;
 
 public class PictureManager {
