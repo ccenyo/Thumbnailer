@@ -66,8 +66,8 @@ public class VideoThumbnail {
                 this.numberOfFrame = 3;
                 this.imageDivisor = new ImageDivisor(1, 3);
             } else {
-                this.numberOfFrame = 6;
-                this.imageDivisor = new ImageDivisor(2, 3);
+                this.numberOfFrame = 4;
+                this.imageDivisor = new ImageDivisor(2, 2);
             }
         }
     }
