@@ -1,5 +1,6 @@
 package thumbnailer;
 import exceptions.VideoThumbnailException;
+import org.bytedeco.javacv.FFmpegFrameGrabber;
 
 import java.io.File;
 import java.util.Optional;
@@ -41,7 +42,7 @@ public class VideoThumbnail {
         return this;
     }
 
-    public File generate() throws VideoThumbnailException {
+    public File generate() throws VideoThumbnailException, FFmpegFrameGrabber.Exception {
         validate();
         handleAutomaticValues();
         var paths = videoManager.getFramesFromVideo(file, numberOfFrame);
@@ -59,7 +60,7 @@ public class VideoThumbnail {
         }
     }
 
-    private void handleAutomaticValues() {
+    private void handleAutomaticValues() throws FFmpegFrameGrabber.Exception {
         if(this.useAutomaticDimensions) {
             var orientation = videoManager.getVideoOrientation(file);
             if(orientation.equals(VideoManager.ORIENTATION.PORTRAIT)) {
